@@ -10,7 +10,7 @@
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <!-- Brand -->
-    <a class="navbar-brand" href="#">Student Management System</a>
+    <a class="navbar-brand" href="#">Student Management</a>
 
     <!-- Toggler/collapsibe Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -51,6 +51,10 @@
             <td th:text="${student.firstName}"></td>
             <td th:text="${student.lastName}"></td>
             <td th:text="${student.email}"></td>
+            <td>
+                <a th:href = "@{/students/edit/{id}(id=${student.id})}" class="btn btn-warning">Update</a>
+                <a th:href = "@{/students/{id}(id=${student.id})}"  class = "btn btn-danger">Delete</a>
+            </td>
         </tr>
         </tbody>
     </table>
